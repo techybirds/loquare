@@ -11,13 +11,11 @@ use App\properties\RetailerModel as retailers;
 use App\properties\PropertyModel as property;
 use App\DistrictzipModel as distzip;
 use App\DistrictModel as district;
-use Illuminate\Support\Facades\Storage;
 use Redirect;
 use Auth;
 use Excel;
 use DB;
 use App\collection\CollectionModel as collect;
-use File;
 
 class HomeController extends Controller
 {
@@ -54,8 +52,6 @@ class HomeController extends Controller
 	    }
 	    $this->data['filters'] = $this->searchdata;
 	    $this->data['logedin']	= Auth::user();
-	
-
     }
 
     /**

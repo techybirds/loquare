@@ -17,7 +17,7 @@ use Redirect;
 use Auth;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManagerStatic as Image;
-use Illuminate\Support\Facades\File;
+
 
 class CI_ModelController extends Controller
 {
@@ -252,7 +252,8 @@ class CI_ModelController extends Controller
 	{
 		if($image != "" && is_object($image))
 		{
-			$uploadpth = public_path()."/storage/";
+			$uploadpth = 'storage/';
+
 			$folders = explode("/", $upload);
 
 			foreach($folders as $dir)
@@ -260,9 +261,6 @@ class CI_ModelController extends Controller
 				if($dir != "")
 				{
 					if (!file_exists($uploadpth.$dir)) {
-
-
-
 						mkdir($uploadpth.$dir, 0777, true);
 						chmod($uploadpth.$dir, 0777);
 					}
@@ -285,7 +283,7 @@ class CI_ModelController extends Controller
 					return array("name" => $fileName, "type" => $image->getClientMimeType());
 				}
 				else
- 				{
+				{
 					return false;
 				}
 
@@ -304,7 +302,7 @@ class CI_ModelController extends Controller
 	{
 		if($image != "" && is_object($image))
 		{
-			$uploadpth = public_path()."/storage/";
+			$uploadpth = 'storage/';
 
 			$folders = explode("/", $upload);
 
@@ -313,7 +311,7 @@ class CI_ModelController extends Controller
 				if($dir != "")
 				{
 					if (!file_exists($uploadpth.$dir)) {
-						mkdir($uploadpth.$dir, 777, true);
+						mkdir($uploadpth.$dir, 0777, true);
 						chmod($uploadpth.$dir, 0777);
 					}
 					else{
