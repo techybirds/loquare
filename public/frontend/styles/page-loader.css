@@ -1,0 +1,28 @@
+.page_loader
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 999999999;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.page_loader .preloader
+{
+    color: #00AB8A;
+}
+.page_loader .preloader i{
+    -webkit-animation: rotate 1.5s infinite; /* Safari 4.0 - 8.0 */
+    animation: rotate 1.5s infinite;
+}
+.page_loader .preloader h4
+{
+
+}

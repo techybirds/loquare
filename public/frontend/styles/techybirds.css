@@ -1,0 +1,451 @@
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+.pagination > li {
+    display: inline;
+}
+#pages li a.previous_page, #pages li a.next_page {
+    border: 1px solid #CCC;
+    padding: 10px 0;
+    color: #CCC;
+    cursor: pointer;
+}
+#pages li a {
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 0;
+}
+.pagination-sm > li:first-child > a, .pagination-sm > li:first-child > span {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 10px 0;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    height: 45px;
+    width: 45px;
+}
+#pages li a.active {
+    border: 1px solid rgb(0, 177, 135);
+}
+.filter__map.fullscren
+{
+    position:fixed;
+    top:-30px;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index: 991;
+}
+
+#retailer_map
+{
+    height: 100%;
+    width: 100%;
+}
+.full_screenmap
+{
+    display: none !important;
+    font-size: 26px;
+    color: #888;
+    display: inline-block;
+    padding: 8px;
+    background-color: #FFF;
+    border-radius: 3px;
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+    z-index: 992;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #CCC;
+    opacity: 0.7;
+}
+
+
+.marker {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    overflow-x: visible;
+    background-color: #36aa9e;
+}
+.marker::after {
+    font-size: 28px;
+    font-weight: bold;
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 5px;
+}
+.marker:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 17px solid transparent;
+    border-right: 18px solid transparent;
+    border-top: 31px solid #36aa9e;
+    bottom: -18px;
+    left: 0px;
+}
+
+.marker-circle::after
+{
+    content:'\f192';
+    color: #FFF;
+    font-family: FontAwesome;
+}
+
+.marker-home::after
+{
+    content: url('../assets/icons/place-tag.svg');
+}
+
+.marker-user:after{
+    content: url('../assets/icons/marker-user.svg');
+}
+
+.marker-star::after
+{
+    content: '\f005';
+    color: #FFF;
+    left: 4px;
+    font-family: FontAwesome;
+}
+
+.marker-restaurants::after
+{
+    content: '\f192';
+    color: #FFF;
+    font-size: 17px;
+    left: 10px;
+    text-align: center;
+    font-family: FontAwesome;
+}
+.marker-pets::after
+{
+    content: '\f211';
+    color: #FFF;
+    font-size: 17px;
+    left: 10px;
+    text-align: center;
+    font-family: FontAwesome;
+}
+.marker-coffee::after
+{
+    content: '\f0f4';
+    color: #FFF;
+    font-size: 17px;
+    left: 10px;
+    text-align: center;
+    font-family: FontAwesome;
+}
+.marker-fitness::after
+{
+    content: '\f05b';
+    color: #FFF;
+    font-size: 17px;
+    left: 10px;
+    text-align: center;
+    font-family: FontAwesome;
+}
+.marker-grocery::after
+{
+    content: '\f10c';
+    color: #FFF;
+    font-size: 17px;
+    left: 10px;
+    text-align: center;
+    font-family: FontAwesome;
+}
+.marker-beauty::after
+{
+    content: '\f06c';
+    color: #FFF;
+    font-size: 17px;
+    left: 10px;
+    text-align: center;
+    font-family: FontAwesome;
+}
+.marker-nightlife::after
+{
+    content: '\f000';
+    color: #FFF;
+    font-size: 17px;
+    left: 10px;
+    text-align: center;
+    font-family: FontAwesome;
+}
+.marker-banks::after
+{
+    content: '\f19c';
+    color: #FFF;
+    font-size: 13px;
+    left: 11px;
+    text-align: center;
+    font-family: FontAwesome;
+}
+.marker-banks::after
+{
+    content: '\f19c';
+    color: #FFF;
+    font-size: 13px;
+    left: 11px;
+    text-align: center;
+    font-family: FontAwesome;
+}
+.marker-schools::after
+{
+    content: '\f02d';
+    color: #FFF;
+    font-size: 17px;
+    left: 10px;
+    text-align: center;
+    font-family: FontAwesome;
+}
+.marker-bus::after
+{
+    content: '\f207';
+    color: #FFF;
+    font-size: 17px;
+    left: 10px;
+    text-align: center;
+    font-family: FontAwesome;
+}
+
+.marker-violate:after
+{
+    content: '';
+    display: block;
+    height: 6px;
+    width: 6px;
+    background-color: transparent;
+    border:5px solid #7530B2;
+    border-radius: 50%;
+}
+
+.hidden
+{
+    display: none !important;
+}
+#street-map, #transportation-map, #service-map, #satelite-map, #buildings, #school-map
+{
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.search_category.active
+{
+    background-color: #36AA9E;
+    color: #FFF;
+}
+.search_category
+{
+    margin-right: 5px;
+}
+
+.collection_filtered
+{
+    display: block;
+    position: absolute;
+    left: 41px;
+    right: 41px;
+    margin-top: 41px;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+}
+.collection_filtered ul
+{
+    list-style: none;
+}
+.collection_filtered ul li
+{
+
+}
+.mapbox-directions-instructions
+{
+    height: 260px;
+    max-height: 260px;
+}
+#searchresults
+{
+    position: absolute;
+    z-index: 999;
+    background: #FFF;
+    border: 1px solid #CCC;
+    overflow: hidden;
+}
+#searchlist
+{
+    list-style: none;
+    max-height: 400px;
+    overflow-y: scroll;
+    width: 108%;
+}
+li.list_title
+{
+    background-color: #F0EAEA;
+    padding: 5px 15px;
+}
+#searchlist li {
+    padding: 2px 30px 2px 15px;
+}
+#searchlist li.list-item
+{
+    cursor: pointer;
+}
+#searchlist li.list-item:hover
+{
+    background-color: #F6F6F6;
+}
+.map-loader
+{
+    background-color: #FFF;
+    z-index: 9999;
+    border: 1px solid #CCC;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+.filter
+{
+}
+.bus_metro span.select2
+{
+    float:right;
+}
+
+.primery_description
+{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    float: right;
+    padding: 5px;
+}
+.primery_description span{
+
+}
+.primery_description .services
+{
+    display: inline;
+    margin-left: 10px;
+}
+
+
+span.fild-error
+{
+    position: absolute;
+    color: #e30;
+    font-size: 12px;
+    font-weight: normal;
+    z-index: 9;
+    border: 1px solid #e30;
+    padding: 5px 10px;
+    margin-top: -40px;
+    background-color: #FFF;
+    margin-left: -45px;
+    border-radius: 10px;
+    font-family: arial;
+    animation-name: notify;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    display: none;
+    text-align: left;
+}
+span.fild-error ul, span.fild-error ol
+{
+    padding-left:10px;
+}
+span.fild-error:after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid #f00;
+    position: absolute;
+    margin-top: 22px;
+    left: 25%;
+}
+.map-error:after
+{
+    margin-top:6px !important;
+}
+@keyframes notify {
+    0%   {margin-top: -40px;}
+    50%   {margin-top: -45px;}
+    100% {margin-top: -40px;}
+}
+.add-property__submit .fa-refresh
+{
+    -webkit-animation: rotate 1s linear infinite;
+    -moz-animation: rotate 1s linear infinite;
+    -ms-animation: rotate 1s linear infinite;
+    -o-animation: rotate 1s linear infinite;
+    animation: rotate 1s linear infinite;
+}
+@-webkit-keyframes rotate /* Safari and Chrome */ {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.not_fond
+{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    margin: 60px auto;
+    color: #CCC;
+}
+.my-properties-block
+{
+    margin-top:15px;
+}
+.load_more
+{
+    margin:10px 0;
+}
