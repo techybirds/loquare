@@ -2,7 +2,6 @@
 @section('title', 'Loquare | Login')
 @section('content')
     <div id="login" class="popup" style="margin: 100px auto;">
-        <h2 align="center">Git successful</h2>
         <div class="popup__inner">
             <div class="popup__title">Log In</div>
             <div class="popup-form popup-form--login">
